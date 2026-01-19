@@ -244,10 +244,7 @@ final class DashboardViewModel: NSObject, ObservableObject {
     }
 
     private func requestCalendarAccess() {
-        eventStore.requestFullAccessToEvents { [weak self] granted, _ in
-            guard granted else { return }
-            Task { @MainActor in
-                self?.loadUpcomingEvents()
+
             }
         }
     }
